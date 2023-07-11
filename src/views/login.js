@@ -4,7 +4,7 @@ import {validateLogin} from '../services/validateUser';
 import LinkButton from '../component/linkButton';
 import logo1 from '../imagens/serverestlogo1.png'
 import '../styles/login.css';
-import {login} from '../services/login';
+import login from '../services/login';
 import {Container, Form, Button, Image} from "react-bootstrap";
 
 const estadoInicial = {formData: {}}

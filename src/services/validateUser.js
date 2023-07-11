@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import history from './history';
 import Utils from './utils';
 
@@ -25,7 +26,7 @@ export function validateToken() {
   if (token === null) { history.push('/login'); }
 }
 
-export function login(email, password) {
+export function loginAposCadastro(email, password) {
   axios
     .post(`${Utils.getBaseUrl()}/login`, {
       email,

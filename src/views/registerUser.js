@@ -3,7 +3,7 @@ import 'bootswatch/dist/minty/bootstrap.min.css';
 import SuccessAlert from '../component/alert'
 import ErrorAlert from '../component/errorAlert'
 import LinkButton from '../component/linkButton';
-import {validateLogin, login} from '../services/validateUser';
+import {validateLogin, loginAposCadastro} from '../services/validateUser';
 import logo1 from '../imagens/serverestlogo1.png'
 import '../styles/registerUser.css';
 import {registerUser} from '../services/users';
@@ -55,7 +55,7 @@ class RegisterUser extends React.Component {
         this.setState({msg_success: this.state.success});
         this.setState({success: response.data.message});
         this.setState(estadoInicial);
-        login(emailUser, passwordUser);
+        loginAposCadastro(emailUser, passwordUser);
         setTimeout(() => {
           validateLogin(emailUser);
         }, 3000);
